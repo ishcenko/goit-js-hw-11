@@ -1,29 +1,41 @@
 body {
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
     'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  background: #ecf0b2;
+
+}
+.form-input {
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  flex: 1;
+  padding: 15px;
+  font-size: 16px;
 }
 .section {
-  background-color: teal;
+  background-color: hsl(156, 68%, 52%);
   padding-top: 50px;
-  outline: 1px solid rosybrown;
+  outline: 1px solid rgb(12, 12, 12);
+  box-shadow:
+      0px 1px 6px rgba(46, 47, 66, 0.08),
+      0px 1px 1px rgba(46, 47, 66, 0.16),
+      0px 2px 1px rgba(46, 47, 66, 0.08);
 }
-.form-wrap {
+ .form-wrap {
   text-align: left;
   position: fixed;
   left: 50%;
   transform: translateX(-50%);
   justify-content: center;
   outline: 1px solid rosybrown;
-}
+} 
 
 .gallery {
+  margin-top: 50px;
   display: flex;
+  flex-direction: row;
   flex-wrap: wrap;
-  gap: 30px 30px;
+  gap: 25px;
   justify-content: center;
-  padding-top: 60px;
-  margin-left: 85px;
-  margin-right: 85px;
 }
 
 .photo-card > a {
@@ -33,12 +45,19 @@ body {
   transition: transform 1s ease;
   transform-origin: center center;
 }
+.photo-card img {
+  width: 100%;
+  height: 210px;
+}
 
 .photo-card {
-  border-radius: 8px;
-  box-shadow: 0 0 16px #302c5a;
-  font-size: 14px;
-  color: #302c5a;
+  width: 280px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: auto;
+  box-shadow: 1px 5px 5px 0px rgb(192, 191, 191);
 }
 
 .photo-card:hover {
@@ -63,37 +82,38 @@ input:focus {
 }
 
 input::placeholder {
-  font-size: 32px;
+  font-size: 18px;
+
   opacity: 70%;
 }
 
-.search-form {
+ .search-form {
   display: flex;
-  height: 100%;
+  /* height: 100%; */
   align-items: center;
   margin-left: auto;
   margin-right: auto;
   padding-left: 10px;
-  overflow: hidden;
-  width: 80px;
-  height: 80px;
-  border-radius: 50px;
-  box-sizing: border-box;
+  /* overflow: hidden; */
+  width: 120px;
+  height: 120px;
+  /* border-radius: 50px; */
+  /* box-sizing: border-box; */
   color: black;
   outline: none;
-  transition: 0.5s;
-  box-shadow: 0 0 16px #302c5a;
-}
+  /* transition: 0.5s; */
+  /* box-shadow: 0 0 16px #302c5a; */
+} 
 
 .search-form:hover,
 .search-form:focus {
-  width: 360px;
-  background-color: #302c5a;
-  border-radius: 10px;
+  /* width: 360px; */
+  /* background-color: #302c5a; */
+  border-radius: 4px;
 }
 
-.search-btn {
-  height: 45px;
+ .search-btn {
+  height: 85px;
   border-radius: 5px;
   font-size: 18px;
   font-weight: bold;
@@ -102,20 +122,20 @@ input::placeholder {
   background-color: #418ba6;
   border-width: 0;
   outline: none;
-}
+} 
 
 .search-btn:hover {
   background-color: #3cc0be;
   cursor: pointer;
 }
 
-.info {
+ .info {
   padding: 0 15px;
   display: flex;
   justify-content: space-between;
 }
 
-.info-item {
+ .info-item {
   text-align: center;
 }
 
@@ -123,19 +143,19 @@ input::placeholder {
   display: none;
 }
 
-img {
+ img {
   width: 380px;
   height: 240px;
   object-fit: cover;
   transition: all 0.5s ease;
-}
+} 
 
-#myBtn {
+ #btnTop {
   display: none;
   position: fixed;
   bottom: 20px;
   right: 30px;
-  z-index: 99;
+  z-index: 999;
   border: none;
   outline: none;
   color: #302c5a;
@@ -145,28 +165,28 @@ img {
   border-radius: 50%;
   font-size: 36px;
   opacity: 70%;
-  box-shadow: 0 0 16px #302c5a;
+  box-shadow: 0 0 16px #06022d;
+} 
+
+#btnTop:hover {
+  background-color: #08052f;
 }
 
-#myBtn:hover {
-  background-color: #302c5a;
-}
-
-#loading {
+ #loading {
   display: none;
   position: fixed;
   top: 50%;
   left: 50%;
   width: 50px;
   height: 50px;
-  border: 3px solid #302c5a;
+  border: 3px solid #09f156;
   border-radius: 50%;
   border-top-color: #fff;
   animation: spin 1s ease-in-out infinite;
   -webkit-animation: spin 1s ease-in-out infinite;
-}
+} 
 
-@keyframes spin {
+/* @keyframes spin {
   to {
     -webkit-transform: rotate(360deg);
   }
@@ -175,12 +195,12 @@ img {
   to {
     -webkit-transform: rotate(360deg);
   }
-}
+} */
 
-.visible {
+/* .visible {
   display: block;
-}
+} */
 
-.captions-style {
+/* .captions-style {
   text-align: right;
-}
+} */

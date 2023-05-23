@@ -126,18 +126,18 @@ function handleInfiniteScroll() {
 }
 
 
-let mybutton = document.getElementById('myBtn');
+let buttonscroltop = document.getElementById('btnTop');
 window.onscroll = function () {
   scrollFunction();
 };
 
 function scrollFunction() {
   if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-    mybutton.style.display = 'block';
-    mybutton.addEventListener('click', topFunction);
+    buttonscroltop.style.display = 'block';
+    buttonscroltop.addEventListener('click', topFunction);
   } else {
-    mybutton.style.display = 'none';
-    mybutton.removeEventListener('click', topFunction);
+    buttonscroltop.style.display = 'none';
+    buttonscroltop.removeEventListener('click', topFunction);
   }
 }
 
